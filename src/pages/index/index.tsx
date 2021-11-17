@@ -4,7 +4,6 @@ import './index.scss'
 
 export default class Index extends Component {
 
-  componentWillMount () { }
 
   componentDidMount () { }
 
