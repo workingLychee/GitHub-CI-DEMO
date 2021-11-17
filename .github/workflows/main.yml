@@ -31,6 +31,6 @@ jobs:
       - name: Run ESLint
         run: yarn run eslint . --ext .js,.jsx,.ts,.tsx
 
-      - name: Upload MiniProgram 
-        uses: ./upload.js
+      # - name: Upload MiniProgram 
+      #   uses: ./upload.js
 
