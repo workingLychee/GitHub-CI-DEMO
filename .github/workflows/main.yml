@@ -23,8 +23,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2 
 
-      - name: prePublish
-
       # Runs a single command using the runners shell
       - name: Run Unit Test 
         run: npm install && npm test
@@ -45,7 +43,7 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: '12.x'
-          
+
       - name: publish
         run: |
           yarn
