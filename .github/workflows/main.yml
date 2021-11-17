@@ -41,10 +41,12 @@ jobs:
       #     project-path: '.'
       #     upload-key: './private.wxdb06592aec752326.key'
 
-      - uses: actions/setup-node@master
+      - name: prePublish
+        uses: actions/setup-node@master
         with:
           node-version: '12.x'
-      - run: |
+      - name: publish
+        run: |
           yarn
           yarn build
           yarn run upload
