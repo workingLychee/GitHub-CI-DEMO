@@ -47,7 +47,7 @@ jobs:
       - name: publish
         run: |
           yarn
-          yarn build
+          yarn build:weapp
           yarn run upload
 
 
