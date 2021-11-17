@@ -28,4 +28,6 @@ jobs:
         run: npm install && npm test
 
       # Runs a set of commands using the runners shell
+      - name: Run ESLint
+        run: eslint . --ext .js,.jsx,.ts,.tsx
 
