@@ -1,6 +1,6 @@
 {
   "name": "myApp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "",
   "templateInfo": {
@@ -28,7 +28,8 @@
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
     "test": "jest",
-    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx; exit 0"
+    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx; exit 0",
+    "upload": "node upload.js"
   },
   "browserslist": [
     "last 3 versions",
@@ -42,6 +43,7 @@
     "@tarojs/react": "3.3.14",
     "@tarojs/runtime": "3.3.14",
     "@tarojs/taro": "3.3.14",
+    "miniprogram-ci": "^1.6.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },
