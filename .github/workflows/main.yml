@@ -24,7 +24,6 @@ jobs:
       - uses: actions/checkout@v2 
 
       - name: prePublish
-        uses: takashiro/publish-wechat-miniprogram@v1.0.1
 
       # Runs a single command using the runners shell
       - name: Run Unit Test 
@@ -36,10 +35,18 @@ jobs:
 
       # - name: Upload MiniProgram 
       #   run: yarn run upload
-      - name: Publish WeChat Miniprogram
-        run: yarn run upload
-        # with:
-        #   project-path: '.'
-        #   upload-key: './private.wxdb06592aec752326.key'
+      # - name: Publish WeChat Miniprogram
+      #   uses: takashiro/publish-wechat-miniprogram@v1.0.1
+      #   with:
+      #     project-path: '.'
+      #     upload-key: './private.wxdb06592aec752326.key'
+
+      - uses: actions/setup-node@master
+        with:
+          node-version: '12.x'
+      - run: |
+          yarn
+          yarn build
+          yarn mp:upload
 
 
