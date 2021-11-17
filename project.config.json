@@ -1,5 +1,5 @@
 {
-    "miniprogramRoot": "dist/",
+    "miniprogramRoot": "/dist",
     "projectname": "GitHub-demo",
     "description": "",
     "appid": "wxdb06592aec752326",
