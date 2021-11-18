@@ -1,21 +1,25 @@
-#.github/workflows/yarn-audit-action.yaml
-name: Yarn-Audit
+name: npm audit
+
 on:
+  pull_request:
   push:
-    branches: [ main ]
+    branches:
+      - main
+
 jobs:
-  build:
+  scan:
+    name: npm audit
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Yarn Audit
-      uses: pragatheeswarans/yarn-audit-action@v1.0.0
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        assignee: 'yihan'
-        label: 'LABEL'
-        title: 'ISSUE TITLE'
-        description: 'ISSUE DESCRIPION'
-        paths: |
-          .
+      - uses: actions/checkout@v2
+      - name: install dependencies
+        run: npm ci
+      - uses: oke-py/npm-audit-action@v1.8.2
+        with:
+          audit_level: moderate
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          issue_assignees: oke-py
+          issue_labels: vulnerability,test
+          dedupe_issues: true
+
           
