@@ -12,7 +12,7 @@ jobs:
       uses: pragatheeswarans/yarn-audit-action@v1.0.0
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        assignee: 'ASSIGNEE NAME'
+        assignee: 'yihan'
         label: 'LABEL'
         title: 'ISSUE TITLE'
         description: 'ISSUE DESCRIPION'
