@@ -31,14 +31,6 @@ jobs:
       - name: Run ESLint
         run: yarn run eslint . --ext .js,.jsx,.ts,.tsx
 
-      # - name: Upload MiniProgram 
-      #   run: yarn run upload
-      # - name: Publish WeChat Miniprogram
-      #   uses: takashiro/publish-wechat-miniprogram@v1.0.1
-      #   with:
-      #     project-path: '.'
-      #     upload-key: './private.wxdb06592aec752326.key'
-
       - name: prePublish
         uses: actions/setup-node@master
         with:
@@ -49,5 +41,7 @@ jobs:
           yarn
           yarn build:weapp
           yarn run upload
+
+
 
 
